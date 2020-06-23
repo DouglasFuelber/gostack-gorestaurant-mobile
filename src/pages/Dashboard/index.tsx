@@ -78,8 +78,8 @@ const Dashboard: React.FC = () => {
           );
         });
 
-      apiFoods.forEach(food => {
-        food.formattedPrice = formatValue(food.price);
+      apiFoods.forEach((food, index) => {
+        apiFoods[index].formattedPrice = formatValue(food.price);
       });
 
       setFoods(apiFoods);

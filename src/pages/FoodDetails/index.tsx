@@ -94,6 +94,8 @@ const FoodDetails: React.FC = () => {
     const index = extras.findIndex(extra => extra.id === id);
 
     extras[index].quantity += 1;
+
+    setExtras([...extras]);
   }
 
   function handleDecrementExtra(id: number): void {
@@ -102,6 +104,8 @@ const FoodDetails: React.FC = () => {
     if (extras[index].quantity > 0) {
       extras[index].quantity -= 1;
     }
+
+    setExtras([...extras]);
   }
 
   function handleIncrementFood(): void {
